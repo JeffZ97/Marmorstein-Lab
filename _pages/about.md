@@ -2,6 +2,7 @@
 title: "About"
 permalink: /about/
 layout: single
+authir_profile: true
 ---
 
 ![Lab Photo](/images/lab_photo.jpg)
