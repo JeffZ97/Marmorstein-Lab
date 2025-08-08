@@ -13,6 +13,9 @@ George W. Raiziss Professor
 Department of Biochemistry and Biophysics  
 University of Pennsylvania Perelman School of Medicine
 
+---
+
+## About our lab
 Our lab studies **epigenetics and chromatin regulation**, with a focus on 
 protein acetylation, acetyl-CoA metabolism, and MAPK signaling pathways.  
 We employ **structural biology** (X-ray crystallography, cryo-EM), biochemical 
