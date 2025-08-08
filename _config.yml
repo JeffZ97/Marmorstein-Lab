@@ -16,7 +16,7 @@ plugins:
   - jekyll-paginate
 
 # URLS
-baseurl: "" # keep empty unless hosting in a subfolder
+baseurl: "/Marmorstein-Lab" # keep empty unless hosting in a subfolder
 url: "https://JeffZ97.github.io/" # change YOURUSERNAME to your GitHub username
 
 # SOCIAL LINKS
