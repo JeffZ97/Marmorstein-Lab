@@ -6,42 +6,71 @@ permalink: /
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Marmorstein Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    body, html {
+    html, body {
       height: 100%;
       margin: 0;
       font-family: Arial, sans-serif;
     }
-    .bg {
-      background-image: url('/Marmorstein-Lab/images/lab_cover.jpg'); /* update path if needed */
-      height: 100%;
+    /* Slideshow container */
+    .slideshow {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+    }
+    /* Each slide is a full-screen layer we fade between */
+    .slide {
+      position: absolute;
+      inset: 0;
       background-position: center;
-      background-repeat: no-repeat;
       background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity 1.2s ease-in-out; /* fade speed */
+    }
+    .slide.active { opacity: 1; }
+
+    /* Centered title button */
+    .center {
+      position: fixed;
+      inset: 0;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      pointer-events: none; /* so clicks pass unless on the link */
     }
-    h1 {
-      color: white;
-      font-size: 4em;
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 20px 40px;
-      border-radius: 10px;
-      text-align: center;
-      cursor: pointer;
+    .enter-link {
+      pointer-events: auto;
       text-decoration: none;
+      cursor: pointer;
+      font-size: clamp(28px, 6vw, 64px);
+      color: #fff;
+      background: rgba(0,0,0,0.45);
+      padding: 18px 36px;
+      border-radius: 12px;
+      font-weight: 700;
     }
-    h1:hover {
-      background-color: rgba(0, 0, 0, 0.6);
-    }
+    .enter-link:hover { background: rgba(0,0,0,0.65); }
   </style>
 </head>
 <body>
-  <div class="bg">
-    <a href="{{ site.baseurl }}/about"><h1>Marmorstein Lab</h1></a>
+  <!-- Slides (add/remove as many as you want) -->
+  <div class="slideshow" id="slideshow">
+    <div class="slide" style="background-image:url('{{ site.baseurl }}/images/slide1.jpg')"></div>
+    <div class="slide" style="background-image:url('{{ site.baseurl }}/images/slide2.jpg')"></div>
+    <div class="slide" style="background-image:url('{{ site.baseurl }}/images/slide3.jpg')"></div>
   </div>
-</body>
-</html>
+
+  <!-- Centered title that links into the site -->
+  <div class="center">
+    <a class="enter-link" href="{{ site.baseurl }}/about">Marmorstein Lab</a>
+  </div>
+
+  <script>
+    // Simple JS rotator
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    let i = 0;
+    function sh
