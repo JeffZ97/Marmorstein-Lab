@@ -29,6 +29,7 @@ twitter: ""
 author:
   name: "Ronen Marmorstein, PhD"
   avatar: "/images/headshot.jpg" # replace with actual file in /images
+  avatar_shape: square
   bio: >-
     George W. Raiziss Professor of Biochemistry and Biophysics, Perelman School of Medicine, University of Pennsylvania.
   location: "Philadelphia, PA"
