@@ -1,30 +1,62 @@
+# SITE SETTINGS
 title: "Marmorstein Lab"
-email: marmor@upenn.edu
+email: "marmor@upenn.edu"
 description: >-
   Research in the Marmorstein Lab focuses on epigenetics, chromatin regulation,
-  protein acetylation and acetyl-CoA metabolism, and MAPK signaling. 
+  protein acetylation and acetyl-CoA metabolism, and MAPK signaling.
   We use structural biology, biochemical, and chemical biology approaches.
-baseurl: "" 
-url: "https://JeffZ97.github.io/marmorstein-lab"
-github_username: JeffZ97
 
-# Social links
-scholar: "https://scholar.google.com/citations?user=XXXX" # Replace with PI's Google Scholar
-orcid: "https://orcid.org/XXXX" # Replace with PI's ORCID
-linkedin: ""
-twitter: ""
-
-# Build settings
-markdown: kramdown
+# THEME
 remote_theme: mmistakes/minimal-mistakes@4.24.0
-plugins:
-  - jekyll-feed
-  - jekyll-paginate
-  - jekyll-sitemap
 
-remote_theme: mmistakes/minimal-mistakes@4.24.0
 plugins:
   - jekyll-include-cache
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-paginate
+
+# URLS
+baseurl: "" # keep empty unless hosting in a subfolder
+url: "https://JeffZ97.github.io/Marmorstein-Lab" # change YOURUSERNAME to your GitHub username
+
+# SOCIAL LINKS
+scholar: "https://scholar.google.com/citations?user=XXXX" # replace XXXX with PI's Google Scholar ID if available
+orcid: "https://orcid.org/XXXX" # replace XXXX if available
+linkedin: ""
+twitter: ""
+
+# AUTHOR PROFILE
+author:
+  name: "Ronen Marmorstein, PhD"
+  avatar: "/images/headshot.jpg" # replace with actual file in /images
+  bio: >-
+    George W. Raiziss Professor of Biochemistry and Biophysics, Perelman School of Medicine, University of Pennsylvania.
+  location: "Philadelphia, PA"
+  email: "marmor@upenn.edu"
+  links:
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:marmor@upenn.edu"
+    - label: "Google Scholar"
+      icon: "ai ai-google-scholar"
+      url: "https://scholar.google.com/citations?user=XXXX"
+    - label: "ORCID"
+      icon: "ai ai-orcid"
+      url: "https://orcid.org/XXXX"
+
+# DEFAULTS
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: single
+      author_profile: true
+
+markdown: kramdown
