@@ -73,4 +73,16 @@ permalink: /
     // Simple JS rotator
     const slides = Array.from(document.querySelectorAll('.slide'));
     let i = 0;
-    function sh
+    function show(n){ slides.forEach((s, idx)=> s.classList.toggle('active', idx===n)); }
+    show(i);
+
+    // Change every X milliseconds (adjust here: 5000 = 5s)
+    const INTERVAL_MS = 5000;
+
+    // Preload images
+    slides.forEach(s => { const img = new Image(); img.src = s.style.backgroundImage.slice(5, -2); });
+
+    setInterval(() => { i = (i + 1) % slides.length; show(i); }, INTERVAL_MS);
+  </script>
+</body>
+</html>
